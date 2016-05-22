@@ -5,12 +5,12 @@ import { Component, PropTypes } from 'react';
 
 import assign from 'object-assign';
 
-import Entries from 'components/common/entries';
-
 import Action from 'actions/sample/action';
 import Store from 'stores/sample/store';
 
 import Constant from 'constants/sample/constant';
+
+import RichEditor from './rich-editor';
 
 class App extends Component {
   constructor(...props) {
@@ -31,9 +31,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>これはsample</h1>
-        <Entries entries={this.state.entries}
-                 action={Action}/>
+        <RichEditor/>
       </div>
     );
   }
